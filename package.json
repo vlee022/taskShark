@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server/server.js",
-    "dev": "webpack serve --mode development --open --hot",
+    "dev": "concurrently \"cross-env NODE_ENV=development webpack serve --open --hot --inline --progress --content-base ./\" \"nodemon ./server/server.js\"",
     "build": "webpack --mode production"
   },
   "repository": {
@@ -43,6 +43,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "html-webpack-plugin": "^5.1.0",
     "json-loader": "^0.5.7",
+    "postcss": "^8.2.6",
     "sass-loader": "^11.0.1",
     "style-loader": "^2.0.0",
     "url-loader": "^4.1.1",
