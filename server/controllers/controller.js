@@ -23,6 +23,7 @@ ticketController.getAll = (req, res, next) => {
   const queryStringGetAll = 'SELECT * FROM tasks';
   db.query(queryStringGetAll)
     .then((data) => {
+      // console.log(data);
       // console.log('TICKETCONTROLLER DATA.ROWS ---------->', data.rows);
       res.locals.tickets = data.rows;
       // console.log('TICKETCONTROLLER DATA.ROWS ------>', res.locals.tickets);
