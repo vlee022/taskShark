@@ -10,18 +10,6 @@ class App extends Component {
     };
     
   }
-  componentDidMount() {
-    // Simple GET request using fetch
-    fetch('/routes')
-        .then(response => response.json())
-        .then(data => this.setState({ databaseInfo: data }))
-        .catch(error => {
-          this.setState({ errorMessage: error.toString() });
-          console.error('There was an error!', error);
-      });
-      getSix(this.state.databaseInfo)
-}
-
 
   componentDidMount() {
     
